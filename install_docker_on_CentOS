@@ -1,0 +1,15 @@
+CentOS 8 - Docker
+
+cat /etc/centos-release
+
+sudo curl https://download.docker.com/linux/centos/docker-ce.repo -o /etc/yum.repos.d/docker-ce.repo
+
+sudo yum makecache
+
+sudo dnf -y install docker-ce --nobest
+
+usermod -aG docker zolee
+
+systemctl enable --now docker
+
+systemctl status docker
